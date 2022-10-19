@@ -1,0 +1,30 @@
+<div class="row g-3">
+    <div class="col-12 col-sm-12">
+        <label for="validationCustom01" class="form-label"><b>Título</b></label>
+        <input required type="text" name="title" class="form-control" id="title" value="<%= article.title%> ">
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-12 col-sm-12">
+        <label for="validationCustom02" class="form-label"><b>Descripción</b></label>
+        <textarea class="form-control" name="description" id="description" rows="3"><%= article.description%> </textarea>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-12 col-sm-12">
+        <label for="validationCustom02" class="form-label"><b>Resumen</b></label>
+        <textarea required class="form-control" name="markdown" id="markdown" rows="3"><%= article.markdown%></textarea>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-12 text-end mt-5">
+        <a href="/" class="btn btn-light">
+            Cancelar
+        </a>
+        <button class="btn btn-primary" type="submit">Guardar cambios</button>
+    </div>
+
+</div>

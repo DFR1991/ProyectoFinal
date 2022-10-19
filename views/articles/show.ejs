@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head.ejs') %>
+</head>
+<body>
+
+    <main class="container-fluid">
+        <section class="row">
+
+                <%- include('aside.ejs') %>
+
+                <section class="col-10 border border-dark">
+
+                    <%- include('_formLogin.ejs') %>
+
+                    <div class="row">
+                        <div class="col-9">
+                        <div class="row">
+                            <article class="card border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                <h4><b> <%= article.title %></b></h4>
+                                </div>
+
+                                <div class="row">
+                                    <p>
+                                        <%=article.sanitizedHtml%> 
+                                    </p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="d-flex justify-content-between">
+                                        
+                                        <div class="col">
+                                            <span>#Reflexiones</span>
+                                        </div>
+
+                                        <div class="col d-flex flex-column align-items-end p-2">
+                                            <span>Nombre</span>
+                                            <span><%= article.createdAt.toLocaleDateString() %>  </span>
+                                        </div>
+
+                                        <div class="col-1 rounded d-flex justify-content-center">
+                                            <img src="/public/Avatar.png" class="img-fluid" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </article>
+                        </div>
+
+
+                        <div class="row">
+                            <article class="card border-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h4 class="p-2">
+                                            <b>Comentarios</b>
+                                        </h4>
+                                    </div>
+
+                                    
+                                    <form class="row p-2" action="">
+
+                                        <div class="col-1">
+                                            <img src="/public/Avatar.png" class="rounded img-fluid" alt="...">
+                                        </div>
+
+
+                                        <div class="col form-group">
+                                            <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+
+                                        <div class="col-2 d-flex flex-column align-self-center">
+                                            <button type="submit" class="btn btn-sm btn-success">Comentar</button>
+                                        </div>
+                                    </form>
+                                        
+                                    
+                                    
+                                    <div class="row p-2">
+                                        <div class="col-1">
+                                            <img src="/public/Avatar.png" class="rounded img-fluid" alt="...">
+                                        </div>
+                                        
+                                        <div class="col">
+                                            <span class="d-flex justify-content-between">
+                                                <b>Nombre de el</b>
+                                                <span>Fecha</span>
+                                            </span>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum consequatur ipsum et expedita deleniti dignissimos, facere fugiat officia itaque animi ex nisi id, consequuntur sit in vel blanditiis obcaecati eum.</p>
+                                        </div>
+
+                                        <div class="col-2 d-flex flex-column align-self-center">
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row p-2">
+                                        
+                                        <div class="col-1">
+                                            <img src="/public/Avatar.png" class="rounded img-fluid" alt="...">
+                                        </div>
+                                        
+                                        <div class="col">
+                                            <span class="d-flex justify-content-between">
+                                                <b>Nombre de el</b>
+                                                <span>Fecha</span>
+                                            </span>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum consequatur ipsum et expedita deleniti dignissimos, facere fugiat officia itaque animi ex nisi id, consequuntur sit in vel blanditiis obcaecati eum.</p>
+                                        </div>
+
+                                        <div class="col-2 d-flex flex-column align-self-center">
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </article>
+                        </div>
+
+                        </div>
+
+                        <%- include('asideRight.ejs') %>
+
+                    </div>
+                    
+                </section>
+        </section>
+    </main>
+
+
+</body>
+</html>
+
